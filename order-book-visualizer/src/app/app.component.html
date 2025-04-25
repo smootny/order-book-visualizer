@@ -1,0 +1,22 @@
+<main class="container">
+  <h1>Order Book Visualizer</h1>
+
+  <div *ngIf="loading() else content">Loading...</div>
+
+  <ng-template #content>
+    <app-order-book-chart
+      [bids]="bids"
+      [asks]="asks">
+    </app-order-book-chart>
+
+    <app-time-controls
+      [maxIndex]="snapshots().length - 1"
+      [currentIndex]="currentIndex"
+      [isPlaying]="isPlaying"      
+      (previous)="onPrevious()"
+      (next)="onNext()"
+      (select)="onSelect($event)"
+      (toggleReplay)="toggleReplay()">
+    </app-time-controls>
+  </ng-template>
+</main>

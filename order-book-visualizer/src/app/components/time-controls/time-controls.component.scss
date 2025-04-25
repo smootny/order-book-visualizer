@@ -1,0 +1,26 @@
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  input[type='range'] {
+    width: 200px;
+  }
+  
+  button {
+    padding: 0.4rem 0.7rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background: #e0e0e0;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  
+  button:hover {
+    background: #c7c7c7;
+  }
+  

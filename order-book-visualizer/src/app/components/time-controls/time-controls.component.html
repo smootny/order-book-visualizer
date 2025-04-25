@@ -1,0 +1,17 @@
+<div class="controls">
+    <button (click)="previous.emit()">⏮️</button>
+  
+    <input
+      type="range"
+      [min]="0"
+      [max]="maxIndex"
+      [value]="currentIndex"
+      (input)="onSliderChange($event)" />
+  
+    <button (click)="next.emit()">⏭️</button>
+  
+    <button (click)="toggleReplay.emit()">
+      {{ isPlaying ? '⏸️ Stop' : '▶️ Replay' }}
+    </button>
+  </div>
+  
