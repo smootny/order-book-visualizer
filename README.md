@@ -24,6 +24,6 @@
 
   
      ```bash
-     npm run dev
+     ng serve
      ```
 
